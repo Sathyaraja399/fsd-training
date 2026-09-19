@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+class Rectangle {
+
+    public float length;
+    public float width;
+
+    public double calculateArea() {
+        float area = length * width;
+        return Math.round(area * 100.0) / 100.0;
+    }
+
+    public double calculatePerimeter() {
+        float perimeter = 2 * (length + width);
+        return Math.round(perimeter * 100.0) / 100.0;
+    }
+}
+
+class Tester {
+
+    public static void main(String args[]) {
+        Rectangle rectangle = new Rectangle();
+        Scanner sc = new Scanner(System.in);
+        float length = sc.nextFloat();
+        float width = sc.nextFloat();
+        rectangle.length = length;
+        rectangle.width = width;
+
+        System.out.println("Area of the rectangle is " + rectangle.calculateArea());
+        System.out.println("Perimeter of the rectangle is " + rectangle.calculatePerimeter());
+    }
+}
